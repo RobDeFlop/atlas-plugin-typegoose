@@ -9,7 +9,7 @@
   },
   "dtsRollup": {
     "enabled": true,
-    "untrimmedFilePath": "./dist/src/index.d.ts"
+    "untrimmedFilePath": "./dist/index.d.ts"
   },
   "tsdocMetadata": {
     "enabled": false

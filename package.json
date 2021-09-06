@@ -1,20 +1,20 @@
 {
-  "name": "package-name",
-  "version": "0.0.0",
-  "description": "> TODO: description",
-  "author": "Florian Uhlrich <f.uhlrich@abstractmedia.de>",
+  "name": "@robdeflop/atlas-plugin-typegoose",
+  "version": "0.0.1",
+  "description": "Typegoose integration for atlas framework",
+  "author": "RobDeFlop",
   "homepage": "",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/index.esm.mjs",
   "types": "dist/index.d.ts",
   "files": [
     "dist/*"
   ],
   "exports": {
     "require": "./dist/index.js",
-    "import": "./dist/index.esm.js"
+    "import": "./dist/index.esm.mjs"
   },
   "scripts": {
     "prebuild": "yarn clean",
@@ -24,7 +24,7 @@
     "watch": "rollup -cw",
     "clean": "rimraf {dist,build,types,*.d.ts,*.tgz}",
     "types": "api-extractor run --local --verbose",
-    "local:pack": "yarn pack --filename package-name.tgz"
+    "local:pack": "rimraf dist/src && yarn pack --filename atlas-plugin-typegoose.tgz"
   },
   "dependencies": {
     "@typegoose/typegoose": "^8.2.0",
@@ -32,12 +32,9 @@
     "rollup-plugin-typescript2": "^0.30.0"
   },
   "devDependencies": {
-    "@abstractflo/atlas-devtools": "..\\..\\atlas-packages\\core\\devtools.tgz",
-    "@abstractflo/atlas-shared": "..\\..\\atlas-packages\\core\\shared.tgz",
+    "@abstractflo/atlas-devtools": "github:abstractflo/atlas#build-devtools",
+    "@abstractflo/atlas-shared": "github:abstractflo/atlas#build-shared",
+    "@microsoft/api-extractor": "^7.18.7",
     "builtin-modules": "^3.2.0"
-  },
-  "peerDependencies": {
-    "@abstractflo/atlas-devtools": "..\\..\\atlas-packages\\core\\devtools.tgz",
-    "@abstractflo/atlas-shared": "..\\..\\atlas-packages\\core\\shared.tgz"
   }
 }

@@ -28,7 +28,8 @@ MONGODB_HOST=YOUR_HOST_ADDRESS
 MONGODB_CONNECTION_STRING=OR_USE_THE_CONNECTION_STRING
 ```
 
-If you added these, and you will start up the server the connection to your MongoDB will be established automatically.
+If the connection credentials are set correctly, the server will automatically establish the connection to your 
+MongoDB on server start.
 
 ## Usage
 
@@ -54,7 +55,8 @@ const userObj = getModelForClass(User);
 const userDoc = new userObj({
   firstName: 'Foo',
   lastName: 'Bar'
-})
+});
+
 userDoc.save().then((document) => {
   //handle the success
 }).catch((err) => {

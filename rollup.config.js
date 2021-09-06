@@ -1,4 +1,7 @@
-import baseConfig from "./scripts/rollup.main.config"
+import baseConfig from './scripts/rollup.main.config';
 import pkg from './package.json';
 
-export default baseConfig({pkg});
+export default baseConfig({
+  external: ['mongoose', '@typegoose/typegoose'],
+  pkg
+});

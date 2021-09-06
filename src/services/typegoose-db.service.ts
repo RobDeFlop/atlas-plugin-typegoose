@@ -1,6 +1,6 @@
 import { Init, Singleton, UtilsService } from '@abstractflo/atlas-shared';
+import { mongoose } from '@typegoose/typegoose';
 import { ConfigInterface } from '../interfaces/config.interface';
-import * as mongoose from 'mongoose'
 
 @Singleton
 export class TypegooseDbService {
